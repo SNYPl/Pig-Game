@@ -1,0 +1,198 @@
+    html {
+        height: 100%;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: url("img/back.jpg") no-repeat;
+        background-size: cover;
+        font-family: Lato;
+    }
+    
+    .main-index {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        background-color: rgba(233, 214, 214, 0.701);
+        margin: 0 auto;
+        width: 85%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+    }
+    
+    .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .player {
+        font-size: 40px;
+        letter-spacing: 2px;
+        font-weight: 100;
+        position: relative;
+        margin-top: 70px;
+    }
+    
+    .player-score {
+        font-size: 80px;
+        font-weight: 100;
+        color: #EB4D4D;
+        margin-bottom: 170px;
+    }
+    
+    .player-box {
+        background-color: #EB4D4D;
+        color: #fff;
+        width: 30%;
+        margin: 0 auto;
+        padding: 15px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    
+    .current {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #222;
+    }
+    
+    .current-score0,
+    .current-score1 {
+        font-size: 35px;
+    }
+    
+    button {
+        position: absolute;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #555;
+        background: none;
+        border: none;
+        font-family: Lato;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 300;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    button:hover {
+        font-weight: bold;
+        border: none;
+    }
+    
+    button:focus {
+        outline: none;
+    }
+    
+    .btn-new {
+        top: 35px;
+    }
+    
+    .btn-roll {
+        bottom: 150px;
+    }
+    
+    .btn-hold {
+        bottom: 80px;
+    }
+    
+    i {
+        color: #EB4D4D;
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 32px;
+        line-height: 1;
+        vertical-align: text-top;
+        margin-top: -4px;
+        transition: margin 0.3s;
+    }
+    
+    .active {
+        background-color: rgba(209, 180, 180, 0.301);
+    }
+    
+    .active .player-0,
+    .active .player-1 {
+        font-weight: 300;
+    }
+    
+    .active .player-0::after,
+    .active .player-1::after {
+        content: "\2022";
+        font-size: 47px;
+        position: absolute;
+        color: #EB4D4D;
+        top: -7px;
+        right: -35px;
+    }
+    
+    .dice {
+        position: absolute;
+        left: 50%;
+        top: 185px;
+        transform: translateX(-50%);
+        height: 100px;
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    }
+    
+    img {
+        display: none;
+    }
+    
+    .winner {
+        background-color: #f3e5e5;
+    }
+    
+    .winner .player {
+        font-weight: 600;
+        color: #EB4D4D;
+    }
+    
+    .rules {
+        text-decoration: none;
+        font-size: 25px;
+        color: #EB4D4D;
+        position: absolute;
+        right: 43%;
+        top: -30px;
+        font-weight: bold;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .current-score0 {
+            text-align: center;
+        }
+        .player-box {
+            padding: 15px 0;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .current {
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #fff;
+            font-weight: 300;
+        }
+    }
